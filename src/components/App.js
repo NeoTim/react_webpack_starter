@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Icon from "../images/1.png";
 
 class App extends Component {
     render() {
@@ -10,7 +9,6 @@ class App extends Component {
                     <span class="glyphicon glyphicon-align-left" aria-hidden="true" />
                     测试加载字体文件
                 </button>
-                <img src={Icon} />
             </div>
         );
     }
