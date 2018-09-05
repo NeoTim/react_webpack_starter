@@ -3,13 +3,22 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/index.tsx",
+    devtool: "inline-source-map",
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "index_bundle.js"
     },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"]
+    },
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: ["babel-loader", "ts-loader", "tslint-loader"],
+                exclude: "/node_modules/"
+            },
             {
                 test: /\.js$/,
                 exclude: "/node_modules/",
