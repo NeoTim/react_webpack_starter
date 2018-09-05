@@ -8,7 +8,7 @@ const settings = {
 };
 
 function srcPathExtend(subpath) {
-    return path.join(settings.srcPath, subpath)
+    return path.join(settings.srcPath, subpath);
 }
 
 module.exports = (env, options) => {
@@ -17,7 +17,7 @@ module.exports = (env, options) => {
     return {
         devtool: isDevMode ? "source-map" : false,
         resolve: {
-            extensions: [".ts", ".tsx", ".js"],
+            extensions: [".ts", ".tsx", ".js"]
         },
         module: {
             rules: [
@@ -38,9 +38,7 @@ module.exports = (env, options) => {
                         {
                             loader: "postcss-loader",
                             options: {
-                                plugins: [
-                                    require("autoprefixer")()
-                                ],
+                                plugins: [require("autoprefixer")()],
                                 sourceMap: isDevMode
                             }
                         },
@@ -57,9 +55,9 @@ module.exports = (env, options) => {
                     use: {
                         loader: "file-loader",
                         options: {
-                            name: "fonts/[name].[ext]",
-                        },
-                    },
+                            name: "fonts/[name].[ext]"
+                        }
+                    }
                 },
                 {
                     test: /\.(jpe?g|png|gif|svg|ico)$/i,
