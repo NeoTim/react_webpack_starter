@@ -37,12 +37,24 @@ module.exports = {
                         name: "fonts/[name].[ext]"
                     }
                 }
+            },
+            {
+                test: /\.(jpe?g|png|gif|ico)$/i,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            outputPath: "assets/"
+                        }
+                    }
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
-        })
+        }),
+        new CleanWebpackPlugin()
     ]
 };
