@@ -20,3 +20,7 @@ npm run build
 ## Branches
 
 -   01-quick-start
+-   02-css-loader
+-   03-font-loader
+-   04-image-loader
+-   05-use-typescript
