@@ -7,7 +7,8 @@ module.exports = {
     devtool: "inline-source-map",
     output: {
         path: path.join(__dirname, "/dist"),
-        filename: "index_bundle.js"
+        filename: "index_bundle.js",
+        publicPath: "/"
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"]
@@ -65,5 +66,8 @@ module.exports = {
             template: "./src/index.html"
         }),
         new CleanWebpackPlugin(["dist"])
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true
+    }
 };
