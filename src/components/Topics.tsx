@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import * as Img from "../images/1.png";
 
 class Topics extends Component<any, {}> {
     render(): JSX.Element {
