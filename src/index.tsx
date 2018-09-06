@@ -8,17 +8,17 @@ import Loadable from "react-loadable";
 const Loading = () => <div>Loading...</div>;
 
 const Home = Loadable({
-    loader: () => import("./components/Home"),
+    loader: () => import(/* webpackChunkName: "home" */ "./components/Home"),
     loading: Loading
 });
 
 const Topics = Loadable({
-    loader: () => import("./components/Topics"),
+    loader: () => import(/* webpackChunkName: "topics" */ "./components/Topics"),
     loading: Loading
 });
 
 const Settings = Loadable({
-    loader: () => import("./components/Settings"),
+    loader: () => import(/* webpackChunkName: "settings" */ "./components/Settings"),
     loading: Loading
 });
 
