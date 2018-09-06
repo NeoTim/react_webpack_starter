@@ -2,11 +2,25 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Home from "./components/Home";
-import Topics from "./components/Topics";
-import Settings from "./components/Settings";
-
 import "./styles/index.scss";
+import Loadable from "react-loadable";
+
+const Loading = () => <div>Loading...</div>;
+
+const Home = Loadable({
+    loader: () => import("./components/Home"),
+    loading: Loading
+});
+
+const Topics = Loadable({
+    loader: () => import("./components/Topics"),
+    loading: Loading
+});
+
+const Settings = Loadable({
+    loader: () => import("./components/Settings"),
+    loading: Loading
+});
 
 class App extends Component {
     render() {
