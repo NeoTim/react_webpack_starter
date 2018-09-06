@@ -19,8 +19,11 @@ npm run build
 
 ## Branches
 
+-   master: The most complex example with all the components together.
 -   01-quick-start
 -   02-css-loader
 -   03-font-loader
 -   04-image-loader
 -   05-use-typescript
+-   06-react-router
+-   07-code-split-at-router-level
