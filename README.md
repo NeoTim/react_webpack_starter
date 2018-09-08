@@ -27,4 +27,4 @@ npm run build
 -   05-use-typescript: use typescript
 -   06-react-router: add react-router
 -   07-code-split-at-router-level
--   08-redux-intro: react+redux+typescript+webpack boilerplate from https://github.com/rokoroku/react-redux-typescript-boilerplate
+-   08-redux-intro: react+redux+typescript+webpack boilerplate from https://github.com/rokoroku/react-redux-typescript-boilerplate ,Redux is really really a BAD idea, it increases the learning curve rapidly!
