@@ -6,16 +6,8 @@ import routes from "./routes";
 
 class App extends React.Component<any, {}> {
     render(): JSX.Element {
-        console.log(this.props);
-
-        return (
-            <div>
-                {routes}
-            </div>
-        );
+        return <div>{routes}</div>;
     }
 }
 
-export default compose(
-    withRouter,
-)(App);
+export default compose(withRouter)(App);
