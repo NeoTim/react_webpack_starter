@@ -1,5 +1,0 @@
-{
-    "presets": ["env", "react"],
-    "comments": true,
-    "plugins": ["dynamic-import-node"]
-}
