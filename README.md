@@ -28,3 +28,4 @@ npm run build
 -   06-react-router: 增加 react-router
 -   07-code-split-at-router-level: 根据路由切分代码。
 -   08-redux-intro: react+redux+typescript+webpack 模板项目，从 https://github.com/rokoroku/react-redux-typescript-boilerplate 拷贝的代码，整合 Redux 和 TypeScript 的过程比较繁琐，不建议直接使用 Redux，太烦人了。
+-   09-mobx: mobx 的基本用法，这个例子从 https://github.com/leighhalliday/create-react-app-mobx 拷贝过来，因为这个作者给例子配了一个 31 分钟的视频，所以这里不改代码，就让它和视频里面演示的内容保持一致，视频在这里（墙）：https://www.youtube.com/watch?v=Dp75-DnGFrU 。相对于 Redux 来说，Mobx 简直是天堂，试试吧。
