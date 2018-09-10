@@ -18,6 +18,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
+                    "my-webpack-loader",
                     "style-loader",
                     "css-loader",
                     {
