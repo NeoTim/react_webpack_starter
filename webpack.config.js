@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
@@ -7,8 +8,8 @@ module.exports = {
     devtool: "inline-source-map",
     output: {
         path: path.join(__dirname, "/dist"),
-        filename: "[name].[hash:16].js",
-        chunkFilename: "[name].[hash:16].js",
+        filename: "[name].[contenthash].js",
+        chunkFilename: "[name].[contenthash].js",
         publicPath: "/"
     },
     resolve: {
@@ -66,7 +67,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html"
         }),
-        new CleanWebpackPlugin(["dist"])
+        new CleanWebpackPlugin(["dist"]),
+        new webpack.HashedModuleIdsPlugin()
     ],
     devServer: {
         historyApiFallback: true
