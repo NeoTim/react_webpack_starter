@@ -68,10 +68,13 @@ module.exports = {
             template: "./src/index.html"
         }),
         new CleanWebpackPlugin(["dist"]),
-        new webpack.HashedModuleIdsPlugin()
+        new webpack.HashedModuleIdsPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        contentBase: "./dist",
+        hot: true
     },
     optimization: {
         runtimeChunk: "single",
